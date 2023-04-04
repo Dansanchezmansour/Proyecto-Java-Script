@@ -1,0 +1,55 @@
+header {
+    border-bottom: groove $colorSecundario 1px;
+
+    nav {
+        background-color: $colorPrincipal;
+        color: white;
+        .form-control {
+            &:focus {
+                box-shadow: 0 0 0 0.25rem #adff2f52;
+                border-color:  $colorSecundario;
+            }
+        }
+    }
+
+    .botonbuscar {
+        @include estiloBotones ($colorSecundario, black);
+        
+        &:hover {
+            opacity: 60%;
+            background-color: $colorSecundario;
+            color: black;
+        }
+    }
+
+    .ulnav {
+        margin-left: 3rem;
+        justify-content: space-between;
+
+        li {
+            margin-right: 4rem;
+
+            .nav-link {
+                color: white;
+                transition: all 0.25s;
+
+                &:hover {
+                    opacity: 60%;
+                }
+            }
+
+
+
+            .active {
+                border-bottom: $colorSecundario solid 1px;
+                color: white !important;
+            }
+
+        }
+
+    }
+
+    .logo {
+        height: 4rem;
+    }
+}

@@ -1,0 +1,295 @@
+@import "variables.scss"; 
+@import "mixins.scss";
+@import "header.scss";
+@import "footer.scss";
+
+
+
+    main {
+        background-image: url(../img/fondomain.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 2rem 0;
+
+        a {
+            .butwp {
+                width: 70px;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(1.2, 1.2);
+                }
+            }
+        }
+
+
+
+        h1 {
+            letter-spacing: 5px;
+            text-shadow: 1px 1px black;
+            text-align: center;
+            color: white;
+
+        }
+    }
+
+/* -----------------------------estilos----tienda---------------------------------------------------------*/
+
+.maintienda {
+
+    .ptienda {
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+        text-align: center;
+        color: white;
+    }
+
+    .card {
+
+        hr {
+            margin: 0;
+        }
+        border-radius: 10px;
+        margin-bottom: 3rem;
+        height: 700px;
+        text-align: center;
+        background-color: #0e2b02ad;
+        color: white;
+        border: solid 2px $colorSecundario;
+
+        .div-producto-tienda {
+            position: relative;
+            text-align: center;
+
+            span {
+                position: absolute;
+                background-color: $colorFondoBotones;
+
+            }
+
+            .precio {
+                font-size: 30px;
+                left: 10px;
+                bottom: 15px;
+                transform: rotate(25deg);
+                padding: 5px 5px;
+                border-radius: 15px;
+                text-shadow: 1px 1px black;
+            }
+
+            .categoria {
+                font-size: 20px;
+                right: 5px;
+                top: 5px;
+                padding: 0 3px;
+                border-radius: 5px;
+            }
+        }
+
+        .img-productos {
+            width: 200px;
+        }
+
+        .cuerpo-card {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .botoncomprar {
+            width: 90px;
+            padding: 5px;
+            background-color: $colorFondoBotones;
+            color: white;
+            border: $colorSecundario 1px solid;
+            border-radius: 10px;
+            transition: all 0.5s;
+
+            &:hover {
+                transform: translate(0, 3px);
+
+            }
+        }
+    }
+}
+
+
+/*------------------------------------------------------contacto------------------------------------------*/
+
+.maincontacto {
+
+
+    h2 {
+        color: white;
+        text-align: start;
+    }
+
+    .formcontacto {
+        .divtextarea {
+            .botones-contacto {
+                .reset, .enviar {
+                    @include estiloBotones ($colorPrincipal, white);
+                    margin-top: 0.5rem;
+                }
+            }
+            .comentarios {
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+
+        .divinputs {
+
+            .inputcontacto {
+                input {
+                    width: 100%;
+                    margin: 0 0 2rem 0;
+                }
+            }
+        }
+    }
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+
+    .formcontacto {
+        text-align: center;
+
+        textarea {
+            width: 85%;
+        }
+    }
+
+    .botones-contacto {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    padding-bottom: 3%;
+}
+
+/*-------------------------Preguntas----frecuentes-------------------------------------------------------*/
+
+.mainpreguntas {
+
+    .conjunto-preguntas {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+
+        .preguntas {
+            color: white;
+            text-align: center;
+            background: linear-gradient(to right, $colorSecundario, black);
+            width: 85%;
+            border-radius: 30px;
+            margin: 2rem 0;
+            padding: 5px 5px;
+
+        }
+    }
+}
+
+/*---------------------------quienes----somos------------------------------------------------------------*/
+.main-quienes {
+
+    .cuerpo-quienes {
+
+        .quienes-div {
+
+            .row {
+                justify-content: center;
+            }
+
+            .quienes-div_img1 {
+                width: 200px;
+                text-align: center;
+            }
+        }
+
+        .tecontamos {
+            background: radial-gradient($colorFondoBotones, black);
+            color: white;
+            border-radius: 40px;
+            width: 70%;
+            padding: 1rem 1rem;
+            text-align: center;
+            margin-left: 15%;
+
+        }
+    }
+}
+
+/*----------------------------------------home-------------------------------------------------------------*/
+
+.main-home {
+
+    .logococo {
+        text-align: center;
+
+        img {
+            width: 30%;
+        }
+    }
+
+    .textos-home {
+        text-align: center;
+        color: white;
+        margin: 0 4rem;
+    }
+}
+
+/*-------------------------@QUERIN------------------------------------------------------------------------*/
+
+
+/*----------------------------quienes---somos-----dekstop---------------------------------------------------*/
+
+@media (min-width: 1024px) {
+    .cuerpo-quienes {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        margin: 5% 0;
+        width: 100%;
+    }
+
+    .quienes-div {
+        width: 80%;
+
+        .row {
+            justify-content: space-evenly;
+        }
+
+        .quienes-div_img1 {
+            height: 250px;
+            width: 200px;
+            transition: all 2s;
+
+            &:hover {
+                transform: scale(1.3, 1.3);
+            }
+        }
+    }
+}
+
+/*----------------------preg---frecuentes---dekstop----------------------------------------------------*/
+
+@media (min-width: 1024px) {
+
+    .mainpreguntas {
+
+        .conjunto-preguntas {
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+
+        }
+    }
+}

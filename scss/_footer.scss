@@ -1,0 +1,50 @@
+footer {
+    padding: 1rem 0;
+    background-color: $colorPrincipal;
+    color: white;
+    border-top: $colorSecundario 1px solid;
+
+    .copyright {
+        letter-spacing: 3px;
+        font-size: 12px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        a {
+            text-decoration: none;
+            color: $colorSecundario;
+        }
+    }
+
+
+    .listado-redes {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+
+        li {
+            margin: 0 1rem;
+
+            i {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media (min-width: 100px) and (max-width: 767px) {
+    footer {
+        .container {
+            .row {
+                .mail {
+                    margin: 40px 0;
+                }
+            }
+
+        }
+    }
+}

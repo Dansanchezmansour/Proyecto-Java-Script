@@ -1,0 +1,8 @@
+@mixin estiloBotones ($bk, $color) {
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+    background-color: $bk;
+    color: $color;
+    border: solid 1px green;
+    transition: all .25s;
+}
